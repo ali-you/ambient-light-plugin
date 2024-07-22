@@ -33,7 +33,7 @@ void main() async {
 }
 
 ```
-Note: checkout [Example](https://github.comambient-light-plugin/example) for complete explanation
+Note: checkout [Example](https://pub.dev/packages/ambient_light/example) for complete explanation
 
 ## Methods
 
@@ -63,4 +63,4 @@ Contributions are welcome! Please submit a pull request or open an issue to disc
 
 ## Licence
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.comambient-light-plugin/license)  file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/ambient-light-plugin/license)  file for details.
