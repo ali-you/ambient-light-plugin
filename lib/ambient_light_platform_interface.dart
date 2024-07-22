@@ -23,7 +23,11 @@ abstract class AmbientLightPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
+  Future<double?> getAmbientLight() async {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Stream<double> get ambientLightStream {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 }

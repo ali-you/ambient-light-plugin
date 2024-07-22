@@ -1,8 +1,11 @@
-
 import 'ambient_light_platform_interface.dart';
 
 class AmbientLight {
-  Future<String?> getPlatformVersion() {
-    return AmbientLightPlatform.instance.getPlatformVersion();
+  Future<double?> currentAmbientLight() async {
+    final double? lux = await AmbientLightPlatform.instance.getAmbientLight();
+    return lux;
   }
+
+  Stream<double> get ambientLightStream =>
+      AmbientLightPlatform.instance.ambientLightStream;
 }

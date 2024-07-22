@@ -7,11 +7,20 @@ import 'ambient_light_platform_interface.dart';
 class MethodChannelAmbientLight extends AmbientLightPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
-  final methodChannel = const MethodChannel('ambient_light');
+  final MethodChannel methodChannel =
+      const MethodChannel('ambient_light.aliyou.dev');
+  @visibleForTesting
+  final EventChannel eventChannel =
+      const EventChannel('ambient_light_stream.aliyou.dev');
 
   @override
-  Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
-    return version;
+  Future<double?> getAmbientLight() async {
+    final double? lux = await methodChannel.invokeMethod('getAmbientLight');
+    return lux;
+  }
+
+  @override
+  Stream<double> get ambientLightStream {
+    return eventChannel.receiveBroadcastStream().map((lux) => lux as double);
   }
 }

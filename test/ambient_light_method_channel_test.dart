@@ -6,10 +6,11 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   MethodChannelAmbientLight platform = MethodChannelAmbientLight();
-  const MethodChannel channel = MethodChannel('ambient_light');
+  const MethodChannel channel = MethodChannel('ambient_light.aliyou.dev');
 
   setUp(() {
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(
       channel,
       (MethodCall methodCall) async {
         return '42';
@@ -18,7 +19,8 @@ void main() {
   });
 
   tearDown(() {
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel, null);
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(channel, null);
   });
 
   test('getPlatformVersion', () async {
