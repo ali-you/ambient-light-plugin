@@ -15,5 +15,4 @@ class AmbientLightWeb extends AmbientLightPlatform {
   static void registerWith(Registrar registrar) {
     AmbientLightPlatform.instance = AmbientLightWeb();
   }
-
 }
