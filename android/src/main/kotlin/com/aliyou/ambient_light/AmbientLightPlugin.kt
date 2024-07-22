@@ -1,4 +1,4 @@
-package com.example.ambient_light
+package com.aliyou.ambient_light
 
 import android.app.Activity
 import android.content.Context

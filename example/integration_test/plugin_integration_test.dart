@@ -16,9 +16,9 @@ void main() {
 
   testWidgets('getPlatformVersion test', (WidgetTester tester) async {
     final AmbientLight plugin = AmbientLight();
-    final String? version = await plugin.getPlatformVersion();
+    final double? version = await plugin.currentAmbientLight();
     // The version string depends on the host platform running the test, so
     // just assert that some non-empty string is returned.
-    expect(version?.isNotEmpty, true);
+    expect(version.runtimeType, double);
   });
 }

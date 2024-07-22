@@ -1,4 +1,4 @@
-package com.example.ambient_light
+package com.aliyou.ambient_light
 
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel

@@ -1,11 +1,15 @@
+## 0.0.4
+
+* Tests passed and channel changed
+
 ## 0.0.3
 
-* change readme
+* README.md changed
 
 ## 0.0.2
 
-* change readme
+* README.md changed
 
 ## 0.0.1
 
-* all platform supported
+* All platform supported

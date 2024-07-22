@@ -1,4 +1,4 @@
-group = "com.example.ambient_light"
+group = "com.aliyou.ambient_light"
 version = "1.0-SNAPSHOT"
 
 buildscript {
@@ -26,7 +26,7 @@ apply plugin: "kotlin-android"
 
 android {
     if (project.android.hasProperty("namespace")) {
-        namespace = "com.example.ambient_light"
+        namespace = "com.aliyou.ambient_light"
     }
 
     compileSdk = 34

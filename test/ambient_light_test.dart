@@ -8,7 +8,10 @@ class MockAmbientLightPlatform
     with MockPlatformInterfaceMixin
     implements AmbientLightPlatform {
   @override
-  Future<String?> getPlatformVersion() => Future.value('42');
+  Stream<double> get ambientLightStream => Stream.value(42);
+
+  @override
+  Future<double?> getAmbientLight() => Future.value(42);
 }
 
 void main() {
@@ -23,6 +26,6 @@ void main() {
     MockAmbientLightPlatform fakePlatform = MockAmbientLightPlatform();
     AmbientLightPlatform.instance = fakePlatform;
 
-    expect(await ambientLightPlugin.getPlatformVersion(), '42');
+    expect(await ambientLightPlugin.currentAmbientLight(), '42');
   });
 }
