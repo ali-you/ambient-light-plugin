@@ -25,14 +25,19 @@ public class AmbientLightPlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
                 result(FlutterError(code: "IN_PROGRESS", message: "Another ambient light request is in progress", details: nil))
             } else {
                 self.result = result
-                startListeningForResult()
+                if let args = call.arguments as? [String: Any],
+                   let useFrontCamera = args["useFrontCamera"] as? Bool {
+                    startListeningForResult(frontCamera: useFrontCamera)
+                } else {
+                    startListeningForResult()
+                }
             }
         default:
             result(FlutterMethodNotImplemented)
         }
     }
 
-    private func startListeningForResult() {
+    private func startListeningForResult(frontCamera: Bool = false) {
         if captureSession == nil {
             captureSession = AVCaptureSession()
         }
@@ -42,7 +47,9 @@ public class AmbientLightPlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
             return
         }
 
-        guard let device = AVCaptureDevice.default(for: .video) else {
+        let position: AVCaptureDevice.Position = frontCamera ? .front : .back
+
+        guard let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: position) else {
             result?(FlutterError(code: "NO_DEVICE", message: "No video device available", details: nil))
             return
         }
@@ -66,7 +73,7 @@ public class AmbientLightPlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
         captureSession.startRunning()
     }
 
-    private func startListening() {
+    private func startListening(frontCamera: Bool = false) {
         if captureSession == nil {
             captureSession = AVCaptureSession()
         }
@@ -76,7 +83,9 @@ public class AmbientLightPlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
             return
         }
 
-        guard let device = AVCaptureDevice.default(for: .video) else {
+        let position: AVCaptureDevice.Position = frontCamera ? .front : .back
+
+        guard let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: position) else {
             eventSink?(FlutterError(code: "NO_DEVICE", message: "No video device available", details: nil))
             return
         }
@@ -108,7 +117,11 @@ public class AmbientLightPlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
 
     public func onListen(withArguments arguments: Any?, eventSink events: @escaping FlutterEventSink) -> FlutterError? {
         self.eventSink = events
-        startListening()
+
+        if let args = arguments as? [String: Any],
+        let useFrontCamera = args["useFrontCamera"] as? Bool{
+            startListening(frontCamera: useFrontCamera)
+        }
         return nil
     }
 
