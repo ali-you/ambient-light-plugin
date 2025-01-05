@@ -6,8 +6,7 @@ you to retrieve the current ambient light level and listen to continuous updates
 ## Features
 
 - **Android:** Uses the `SensorManager` to access the device's ambient light sensor.
--
-    - **iOS:** Uses `CoreMotion` to access the ambient light sensor data on compatible iOS devices.
+- **iOS:** Uses `CoreMotion` to access the ambient light sensor data on compatible iOS devices.
 - **macOS:** Uses `IOKit` to access the ambient light sensor data on compatible macOS devices.
 - **Retrieve Current Light Level:** Get the current ambient light level as a single value.
 - **Stream Light Level:** Listen to continuous updates of the ambient light level.
