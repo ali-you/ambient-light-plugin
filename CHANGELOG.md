@@ -1,3 +1,7 @@
+## 0.0.5
+
+* Dependencies upgraded!
+
 ## 0.0.4
 
 * Tests passed and channel changed
