@@ -1,24 +1,18 @@
-## 0.0.6
+## [0.0.7]
+- Upgraded dependencies
+- Updated `README.md`
 
-* Dependencies upgraded!
-* README.md updated
+## [0.0.5]
+- Upgraded dependencies
 
-* ## 0.0.5
+## [0.0.4]
+- Passed tests and updated channel
 
-* Dependencies upgraded!
+## [0.0.3]
+- Updated `README.md`
 
-## 0.0.4
+## [0.0.2]
+- Updated `README.md`
 
-* Tests passed and channel changed
-
-## 0.0.3
-
-* README.md changed
-
-## 0.0.2
-
-* README.md changed
-
-## 0.0.1
-
-* All platform supported
+## [0.0.1]
+- Initial release with support for all platforms
