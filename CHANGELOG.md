@@ -1,4 +1,9 @@
-## 0.0.5
+## 0.0.6
+
+* Dependencies upgraded!
+* README.md updated
+
+* ## 0.0.5
 
 * Dependencies upgraded!
 
