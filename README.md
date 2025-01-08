@@ -4,8 +4,14 @@
 <a href="https://github.com/ali-you/ambient-light-plugin/issues">
    <img alt="Issues" src="https://img.shields.io/github/issues/ali-you/ambient-light-plugin?color=0088ff" />
 </a>
-<a href="https://github.com/ali-you/ambient-light-plugin/pulls">
+<a href="https://github.com/ali-you/ambient-light-plugin/issues?q=is%3Aclosed">
+   <img alt="Issues" src="https://img.shields.io/github/issues-closed/ali-you/ambient-light-plugin?color=0088ff" />
+</a>
+<!-- <a href="https://github.com/ali-you/ambient-light-plugin/pulls">
    <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/ali-you/ambient-light-plugin?color=0088ff" />
+</a> -->
+<a href="https://github.com/ali-you/ambient-light-plugin/pulls">
+   <img alt="GitHub Pull Requests" src="https://badgen.net/github/prs/ali-you/ambient-light-plugin" />
 </a>
 <a href="https://github.com/ali-you/ambient-light-plugin/blob/main/LICENSE" rel="ugc">
    <img src="https://img.shields.io/github/license/ali-you/ambient-light-plugin?color=#007A88&amp;labelColor=333940;" alt="GitHub">
