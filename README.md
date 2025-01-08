@@ -81,8 +81,8 @@ ambient light.
 
 ```xml
 
-<key>NSCameraUsageDescription</key><string>We need access to the camera to measure ambient light.
-</string>
+<key>NSCameraUsageDescription</key>
+<string>We need access to the camera to measure ambient light.</string>
 
 ```
 
