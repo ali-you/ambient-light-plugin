@@ -23,11 +23,11 @@ abstract class AmbientLightPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<double?> getAmbientLight({bool useFrontCameraOnIOS = false}) async {
+  Future<double?> getAmbientLight({bool frontCamera = false}) async {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
-  Stream<double> ambientLightStream({bool useFrontCameraOnIOS = false}) {
+  Stream<double> ambientLightStream({bool frontCamera = false}) {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 }

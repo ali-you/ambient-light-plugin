@@ -8,11 +8,11 @@ class MockAmbientLightPlatform
     with MockPlatformInterfaceMixin
     implements AmbientLightPlatform {
   @override
-  Stream<double> ambientLightStream({bool useFrontCameraOnIOS = false}) =>
+  Stream<double> ambientLightStream({bool frontCamera = false}) =>
       Stream.value(42);
 
   @override
-  Future<double?> getAmbientLight({bool useFrontCameraOnIOS = false}) =>
+  Future<double?> getAmbientLight({bool frontCamera = false}) =>
       Future.value(42);
 }
 

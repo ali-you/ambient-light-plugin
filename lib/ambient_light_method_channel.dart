@@ -14,15 +14,15 @@ class MethodChannelAmbientLight extends AmbientLightPlatform {
       const EventChannel('ambient_light_stream.aliyou.dev');
 
   @override
-  Future<double?> getAmbientLight({bool useFrontCameraOnIOS = false}) async {
+  Future<double?> getAmbientLight({bool frontCamera = false}) async {
     final double? lux = await methodChannel
-        .invokeMethod('getAmbientLight', {'useFrontCamera': useFrontCameraOnIOS});
+        .invokeMethod('getAmbientLight', {'useFrontCamera': frontCamera});
     return lux;
   }
 
   @override
-  Stream<double> ambientLightStream({bool useFrontCameraOnIOS = false}) {
+  Stream<double> ambientLightStream({bool frontCamera = false}) {
     return eventChannel.receiveBroadcastStream(
-        {'useFrontCamera': useFrontCameraOnIOS}).map((lux) => lux as double);
+        {'useFrontCamera': frontCamera}).map((lux) => lux as double);
   }
 }
