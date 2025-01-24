@@ -42,7 +42,7 @@ Include the following dependency in your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  ambient_light: ^0.1.0
+  ambient_light: ^0.1.1
   
 ```
 
@@ -75,7 +75,13 @@ void main() async {
 
 ```
 
-Note: checkout [Example](https://pub.dev/packages/ambient_light/example) for complete explanation
+**Note:**
+
+- The frontCamera parameter is iOS only and allows you to specify whether to use the front or back camera for measuring ambient light. For other platforms, you can initialize with the default:
+    ```dart
+    final AmbientLight _ambientLight = AmbientLight();
+    ```
+- Checkout [Example](https://pub.dev/packages/ambient_light/example) for complete explanation
 
 ## Methods
 
