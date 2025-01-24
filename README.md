@@ -35,7 +35,23 @@ you to retrieve the current ambient light level and listen to continuous updates
 
 ## Installation
 
-To use this plugin, add `ambient_light` as a dependency in your `pubspec.yaml` file.
+To use this plugin, you can add it to your Flutter project in one of two ways:
+
+### 1. Add to `pubspec.yaml`
+Include the following dependency in your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  ambient_light: ^0.1.0
+  
+```
+
+### 2. Add directly from the terminal
+Run the following command to add the plugin directly to your project:
+
+```bash
+flutter pub add ambient_light
+```
 
 ## Usage
 
@@ -45,12 +61,14 @@ Import the package and use the provided methods to get ambient light sensor data
 import 'package:ambient_light/ambient_light.dart';
 
 void main() async {
+  final AmbientLight _ambientLight = AmbientLight(frontCamera: true);
+  
   // Get ambient light value
-  double? lightLevel = await AmbientLight().currentAmbientLight();
+  double? lightLevel = await _ambientLight.currentAmbientLight();
   print('Ambient light level: $lightLevel');
 
   // Listen to ambient light sensor data stream
-  AmbientLight().ambientLightStream.listen((double lightLevel) {
+  _ambientLight.ambientLightStream.listen((double lightLevel) {
     print('Ambient light level: $lightLevel');
   });
 }
