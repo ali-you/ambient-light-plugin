@@ -15,7 +15,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final AmbientLight _ambientLight = AmbientLight();
+  final AmbientLight _ambientLight = AmbientLight(frontCamera: true);
   double? _currentAmbientLight;
   double? _currentAmbientLightStream;
   StreamSubscription<double>? _ambientLightSubscription;

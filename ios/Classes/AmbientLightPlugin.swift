@@ -26,8 +26,8 @@ public class AmbientLightPlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
             } else {
                 self.result = result
                 if let args = call.arguments as? [String: Any],
-                   let useFrontCamera = args["useFrontCamera"] as? Bool {
-                    startListeningForResult(frontCamera: useFrontCamera)
+                   let frontCamera = args["frontCamera"] as? Bool {
+                    startListeningForResult(frontCamera: frontCamera)
                 } else {
                     startListeningForResult()
                 }
@@ -119,8 +119,8 @@ public class AmbientLightPlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
         self.eventSink = events
 
         if let args = arguments as? [String: Any],
-        let useFrontCamera = args["useFrontCamera"] as? Bool{
-            startListening(frontCamera: useFrontCamera)
+        let frontCamera = args["frontCamera"] as? Bool{
+            startListening(frontCamera: frontCamera)
         }
         return nil
     }

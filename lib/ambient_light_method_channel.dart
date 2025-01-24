@@ -16,13 +16,13 @@ class MethodChannelAmbientLight extends AmbientLightPlatform {
   @override
   Future<double?> getAmbientLight({bool frontCamera = false}) async {
     final double? lux = await methodChannel
-        .invokeMethod('getAmbientLight', {'useFrontCamera': frontCamera});
+        .invokeMethod('getAmbientLight', {'frontCamera': frontCamera});
     return lux;
   }
 
   @override
   Stream<double> ambientLightStream({bool frontCamera = false}) {
     return eventChannel.receiveBroadcastStream(
-        {'useFrontCamera': frontCamera}).map((lux) => lux as double);
+        {'frontCamera': frontCamera}).map((lux) => lux as double);
   }
 }

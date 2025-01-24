@@ -1,3 +1,6 @@
+## [0.1.1]
+- Introduced a new interface allowing users to choose between the front camera and back camera to measure ambient light on iOS.
+
 ## [0.0.7]
 - Upgraded dependencies
 - Updated `README.md`

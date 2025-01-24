@@ -23,7 +23,7 @@ void main() {
     expect(initialPlatform, isInstanceOf<MethodChannelAmbientLight>());
   });
 
-  test('getPlatformVersion', () async {
+  test('getCurrentAmbientLight', () async {
     AmbientLight ambientLightPlugin = AmbientLight();
     MockAmbientLightPlatform fakePlatform = MockAmbientLightPlatform();
     AmbientLightPlatform.instance = fakePlatform;

@@ -1,6 +1,6 @@
 name: ambient_light
 description: "A powerful plugin to access ambient light sensor data on Android, iOS and macOS"
-version: 0.0.7
+version: 0.1.1
 homepage: https://github.com/ali-you
 repository: https://github.com/ali-you/ambient-light-plugin
 documentation: https://github.com/ali-you/ambient-light-plugin
