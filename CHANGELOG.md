@@ -1,5 +1,5 @@
 ## [0.1.1]
-- README.md updated for new interface
+- `README.md` updated for new interface
 
 ## [0.1.0]
 - Introduced a new interface allowing users to choose between the front camera and back camera to measure ambient light on iOS.
