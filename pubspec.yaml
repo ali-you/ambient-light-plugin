@@ -9,7 +9,7 @@ topics:
   - sensor
   - light
   - utils
-  - ambient-light
+  - ambient
   - brightness
 
 environment:
