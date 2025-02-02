@@ -100,7 +100,7 @@ Returns a stream of ambient light sensor data as double.
 ## iOS
 
 For iOS, the plugin uses CoreMotion to access ambient light sensor data. You need to add the
-following key to your Info.plist to request access to the camera, which is required for measuring
+following key to your `Info.plist` to request access to the camera, which is required for measuring
 ambient light.
 
 ```xml
@@ -116,6 +116,6 @@ Contributions are welcome! Please submit a pull request or open an issue to disc
 
 ## Licence
 
-This project is licensed under the MIT License. See
+This project is licensed under the BSD 3-Clause License. See
 the [LICENSE](https://github.com/ali-you/ambient-light-plugin?tab=BSD-3-Clause-1-ov-file)  file for
 details.
