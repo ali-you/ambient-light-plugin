@@ -42,7 +42,7 @@ Include the following dependency in your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  ambient_light: ^0.1.1
+  ambient_light: ^0.1.2
   
 ```
 
@@ -72,7 +72,6 @@ void main() async {
     print('Ambient light level: $lightLevel');
   });
 }
-
 ```
 
 **Note:**

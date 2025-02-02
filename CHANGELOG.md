@@ -1,3 +1,6 @@
+## [0.1.2]
+- `README.md` updated for new interface
+
 ## [0.1.1]
 - `README.md` updated for new interface
 
