@@ -76,7 +76,7 @@ void main() async {
 
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
-> - The frontCamera parameter is iOS only and allows you to specify whether to use the front or back camera for measuring ambient light. For other ?> platforms, you can initialize with the default:
+> - The frontCamera parameter is iOS only and allows you to specify whether to use the front or back camera for measuring ambient light. For other platforms, you can initialize with the default:
 >     ```dart
 >     final AmbientLight _ambientLight = AmbientLight();
 >     ```
