@@ -1,3 +1,7 @@
+## [0.1.3]
+- The package no longer support Web interface
+- `README.md` updated for new interface
+
 ## [0.1.2]
 - `README.md` updated for new interface
 

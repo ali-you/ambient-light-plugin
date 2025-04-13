@@ -42,7 +42,7 @@ Include the following dependency in your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  ambient_light: ^0.1.2
+  ambient_light: ^0.1.3
   
 ```
 
