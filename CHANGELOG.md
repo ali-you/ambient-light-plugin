@@ -1,3 +1,7 @@
+## [0.1.4]
+- Enhanced iOS performance and responsiveness by resolving critical main thread issues
+- `README.md` updated for new interface
+
 ## [0.1.3]
 - The package no longer support Web interface
 - `README.md` updated for new interface
