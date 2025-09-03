@@ -106,7 +106,9 @@ public class AmbientLightPlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
 
         videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "sample buffer delegate"))
         captureSession.addOutput(videoOutput)
-        captureSession.startRunning()
+        DispatchQueue.global(qos: .background).async {
+            captureSession.startRunning()
+        }
     }
 
     private func stopListening() {
